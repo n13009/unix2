@@ -1,0 +1,22 @@
+named.conf.default-zones
+cp db.255 yonashiro.zone
+vi yonashiro.zone
+
+named.conf.default-zones
+zone "n13009.it-college.local" {
+type master;
+file "/etc/bind/n13009.it-college.local.zone";
+};
+
+n13009.it-college.local.zone
+$TTL 60
+@ IN SAO n13009.it-college.local. 管理者メアド@は.で置換
+2014060401 ;serial
+
+@ IN NS n13009.it-college.local.
+IN NS n13009.it-college.local.
+IN A 10.0.137.204
+
+ここまできたら
+	$sudo /etc/init.d/bind9 restart
+	$dig #localhost n13009.it-college.local

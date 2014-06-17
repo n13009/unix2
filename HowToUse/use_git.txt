@@ -1,0 +1,6 @@
+前提としてinit済み
+githubの自分のとこに新しいリポジトリをつくる
+目的のファイルの場所に行き
+$git add filename.xxx
+$git commit -m '簡単な中身の紹介'
+$git push
